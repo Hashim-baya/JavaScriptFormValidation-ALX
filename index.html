@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration</title>
+  <script defer src="main.js"></script>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>User Registration Form</h2>
+  <form id="registrationForm" action="/submit-form" method="POST">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required minlength="3" maxlength="15">
+      <span class="error" id="usernameError"></span>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <span class="error" id="emailError"></span>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required minlength="6">
+      <span class="error" id="passwordError"></span>
+    </div>
+    <div>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="18" max="99">
+      <span class="error" id="ageError"></span>
+    </div>
+    <div>
+      <input type="submit" value="Register">
+    </div>
+  </form>
+
+</body>
+</html>
